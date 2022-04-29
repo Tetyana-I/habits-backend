@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "title": "Clean diet",
+            "habit_description": "No junk food, limit coffee",
+            "streak_target": 66,
+            "max_streak": 0,
+            "attempt": 1,
+            "current_counter": 0,
+            "last_checked": null
+        }
+    ],
+    "required": [
+
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "Habit's title",
+            "default": "",
+            "examples": [
+                "Clean diet"
+            ]
+        },
+        "habit_description": {
+            "type": "string",
+            "description": "Detail explanation of the habit",
+            "default": "",
+            "examples": [
+                "No junk food, limit coffee"
+            ]
+        },
+        "streak_target": {
+            "type": "integer",
+            "description": "Number of days to establish the habit",
+            "default": 66,
+            "examples": [
+                66
+            ]
+        },
+        "max_streak": {
+            "$id": "#/properties/max_streak",
+            "type": "integer",
+            "title": "The max_streak schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "attempt": {
+            "$id": "#/properties/attempt",
+            "type": "integer",
+            "title": "The attempt schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "current_counter": {
+            "$id": "#/properties/current_counter",
+            "type": "integer",
+            "title": "The current_counter schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "last_checked": {
+            "$id": "#/properties/last_checked",
+            "type": "string",
+            "format": "date",
+            "title": "The last_checked schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "1900-01-01",
+            "examples": [
+                "1900-01-01"
+            ]
+        }
+    },
+    "additionalProperties": false
+}
